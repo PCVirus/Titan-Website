@@ -1,93 +1,16 @@
-/* css/style.css */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f7fa;
-  color: #333;
-  line-height: 1.6;
-}
-
-header {
-  background-color: #0085B5;
-  color: #fff;
-  padding: 1rem 0;
-}
-
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  margin: 0 auto;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-main .hero {
-  background: #00B6EF;
-  color: #fff;
-  padding: 4rem 0;
-  text-align: center;
-}
-
-main .cta {
-  background: #8CC63F;
-  color: #fff;
-  padding: 2rem 0;
-  text-align: center;
-}
-
-.button {
-  background-color: #005F80;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.button:hover {
-  background-color: #004861;
-}
-
-footer {
-  background-color: #A7A9AC;
-  color: #fff;
-  text-align: center;
-  padding: 1rem 0;
-  font-size: 0.9rem;
-}
-
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.page {
-  padding: 3rem 0;
-}
-
-ul li {
-  margin-bottom: 1rem;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f5f7fa; color: #333; line-height: 1.6; }
+header { background-color: #0085B5; color: #fff; padding: 1rem 0; }
+header .container { display: flex; justify-content: space-between; align-items: center; width: 90%; margin: 0 auto; }
+nav ul { list-style: none; display: flex; gap: 1.5rem; }
+nav a { color: #fff; text-decoration: none; font-weight: 500; }
+nav a:hover { text-decoration: underline; }
+main .hero { background: #00B6EF; color: #fff; padding: 4rem 0; text-align: center; }
+main .cta { background: #8CC63F; color: #fff; padding: 2rem 0; text-align: center; }
+.button { background-color: #005F80; color: #fff; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; }
+.button:hover { background-color: #004861; }
+footer { background-color: #A7A9AC; color: #fff; text-align: center; padding: 1rem 0; font-size: 0.9rem; }
+.container { width: 90%; max-width: 1100px; margin: 0 auto; }
+.page { padding: 3rem 0; }
+ul li { margin-bottom: 1rem; }
