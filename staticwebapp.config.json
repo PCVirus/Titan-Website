@@ -1,0 +1,24 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "/about.html",
+      "/services.html",
+      "/contact.html"
+    ]
+  },
+  "routes": [
+    {
+      "route": "/about.html",
+      "rewrite": "/about.html"
+    },
+    {
+      "route": "/services.html",
+      "rewrite": "/services.html"
+    },
+    {
+      "route": "/contact.html",
+      "rewrite": "/contact.html"
+    }
+  ]
+}
