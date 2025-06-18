@@ -281,13 +281,14 @@ footer {
   max-width: 320px;
   flex: 1;
   text-align: left;
+  display: block;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.blog-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  margin-bottom: 1rem;
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .blog-card h3 {
@@ -305,9 +306,4 @@ footer {
 .read-more {
   color: #005F80;
   font-weight: 600;
-  text-decoration: none;
-}
-
-.read-more:hover {
-  text-decoration: underline;
 }
