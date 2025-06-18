@@ -224,3 +224,24 @@ footer {
     max-width: 100%;
   }
 }
+/* === GREEN CTA STRIP === */
+.cta-strip {
+  background-color: #8CC63F;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.cta-strip .button {
+  background-color: #005F80;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.cta-strip .button:hover {
+  background-color: #004861;
+}
