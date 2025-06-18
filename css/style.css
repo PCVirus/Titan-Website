@@ -1,4 +1,4 @@
-/* === GLOBAL RESETS === */
+/* === GLOBAL RESET === */
 * {
   margin: 0;
   padding: 0;
@@ -12,18 +12,14 @@ body {
   line-height: 1.6;
 }
 
-/* === CONTAINERS === */
+/* === CONTAINER === */
 .container {
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.page {
-  padding: 3rem 0;
-}
-
-/* === HEADER & NAVIGATION === */
+/* === HEADER === */
 header {
   background-color: #0085B5;
   padding: 1rem 0;
@@ -82,7 +78,50 @@ nav a:hover {
   color: #444;
 }
 
-/* === ABOUT & SERVICES === */
+.hero-content a {
+  font-weight: 600;
+  text-decoration: underline;
+  color: #0077aa;
+}
+
+/* === OPTIONAL CTA BANNER === */
+.cta-banner {
+  background-color: #00B6EF;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.cta-banner h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.cta-banner p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === BUTTON === */
+.button {
+  background-color: #005F80;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #004861;
+}
+
+/* === ABOUT & SERVICES SECTION === */
 .about-services {
   background-color: #fff;
   padding: 4rem 2rem;
@@ -139,42 +178,6 @@ nav a:hover {
   font-size: 0.95rem;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .service-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-/* === CALL TO ACTION SECTION === */
-.cta {
-  background: #8CC63F;
-  color: #fff;
-  padding: 2rem 0;
-  text-align: center;
-}
-
-.button {
-  background-color: #005F80;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-block;
-  transition: background 0.3s ease;
-}
-
-.button:hover {
-  background-color: #004861;
-}
-
-/* === BLOG / PAGE CONTENT === */
-ul li {
-  margin-bottom: 1rem;
-}
-
 /* === FOOTER === */
 footer {
   background-color: #A7A9AC;
@@ -197,5 +200,14 @@ footer {
   nav ul {
     flex-direction: column;
     align-items: center;
+  }
+
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 100%;
   }
 }
