@@ -19,7 +19,7 @@ ul li { margin-bottom: 1rem; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6rem 2rem 4rem;
+  padding: 4rem 2rem 3rem;
   background-color: #f4f7f8;
   min-height: 100vh;
   text-align: center;
@@ -28,13 +28,17 @@ ul li { margin-bottom: 1rem; }
 
 .nav {
   position: absolute;
-  top: 2rem;
+  top: 1.5rem;
   left: 2rem;
 }
 
 .logo {
-  height: 40px;
+  height: 60px; /* increased from 40px */
   width: auto;
+}
+
+.hero-content {
+  margin-top: 4rem; /* pulls heading up slightly */
 }
 
 .hero-content h1 {
@@ -74,4 +78,3 @@ ul li { margin-bottom: 1rem; }
     font-size: 1rem;
   }
 }
-
