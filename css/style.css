@@ -16,15 +16,12 @@ footer { background-color: #A7A9AC; color: #fff; text-align: center; padding: 1r
 ul li { margin-bottom: 1rem; }
 /* === HERO SECTION === */
 .hero {
-  padding: 5rem 2rem 2rem; /* tighten top and bottom padding */
+  padding: 4rem 2rem 2rem;
   background-color: #f4f7f8;
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   text-align: center;
   position: relative;
 }
+
 
 .nav {
   position: absolute;
@@ -39,19 +36,15 @@ ul li { margin-bottom: 1rem; }
 
 .hero-content {
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
-  max-width: 700px;
-  margin: 0 auto 1rem;
-  color: #1a1a1a;
+  font-size: 2.25rem;
+  margin-bottom: 0.75rem;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  color: #444;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
 }
