@@ -382,3 +382,31 @@ footer {
   margin-top: 2rem;
   display: inline-block;
 }
+/* === NAVIGATION === */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Light nav override for hero headers */
+header.hero .nav a {
+  color: #fff;
+}
