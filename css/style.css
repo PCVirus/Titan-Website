@@ -382,52 +382,6 @@ footer {
   margin-top: 2rem;
   display: inline-block;
 }
-/* === NAVIGATION === */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-  flex-wrap: wrap;
-}
-
-.nav .logo {
-  height: 60px;
-  width: auto;
-}
-
-.nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav a {
-  color: #1a1a1a;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.nav a:hover {
-  text-decoration: underline;
-}
-
-/* Make nav links white when inside a .hero */
-header.hero .nav a {
-  color: #1a1a1a; /* black/dark grey */
-}
-
-/* Optional: Prevent line wrap on small screens */
-@media (max-width: 600px) {
-  .nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav ul {
-    margin-top: 1rem;
-  }
-}
 /* === NAVIGATION WRAPPER === */
 .nav-wrapper {
   display: flex;
@@ -442,6 +396,11 @@ header.hero .nav a {
 }
 
 /* === NAVIGATION MENU === */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
 .nav ul {
   list-style: none;
   display: flex;
@@ -449,18 +408,13 @@ header.hero .nav a {
 }
 
 .nav a {
-  color: #1a1a1a;
+  color: #1a1a1a; /* dark grey for readability */
   text-decoration: none;
   font-weight: 500;
 }
 
 .nav a:hover {
   text-decoration: underline;
-}
-
-/* White links when inside hero */
-header.hero .nav a {
-  color: #fff;
 }
 
 /* === RESPONSIVE === */
@@ -475,3 +429,4 @@ header.hero .nav a {
     justify-content: center;
   }
 }
+
