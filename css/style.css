@@ -414,7 +414,7 @@ footer {
 
 /* Make nav links white when inside a .hero */
 header.hero .nav a {
-  color: #fff;
+  color: #1a1a1a; /* black/dark grey */
 }
 
 /* Optional: Prevent line wrap on small screens */
