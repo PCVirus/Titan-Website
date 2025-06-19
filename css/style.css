@@ -428,3 +428,50 @@ header.hero .nav a {
     margin-top: 1rem;
   }
 }
+/* === NAVIGATION WRAPPER === */
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+
+.nav-wrapper .logo {
+  height: 60px;
+  width: auto;
+}
+
+/* === NAVIGATION MENU === */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* White links when inside hero */
+header.hero .nav a {
+  color: #fff;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .nav-wrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
