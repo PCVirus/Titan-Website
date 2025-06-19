@@ -388,6 +388,12 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.nav .logo {
+  height: 60px;
+  width: auto;
 }
 
 .nav ul {
@@ -406,7 +412,19 @@ footer {
   text-decoration: underline;
 }
 
-/* Light nav override for hero headers */
+/* Make nav links white when inside a .hero */
 header.hero .nav a {
   color: #fff;
+}
+
+/* Optional: Prevent line wrap on small screens */
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav ul {
+    margin-top: 1rem;
+  }
 }
