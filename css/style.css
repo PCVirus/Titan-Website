@@ -307,3 +307,43 @@ footer {
   color: #005F80;
   font-weight: 600;
 }
+/* === BLOG INDEX PAGE === */
+.blog-list {
+  background-color: #fff;
+  padding: 4rem 2rem;
+}
+
+.blog-list .blog-card {
+  background: #f5f7fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 0 1px #e0e0e0;
+}
+
+.blog-list .blog-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.blog-list .blog-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #0085B5;
+}
+
+.blog-list .blog-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.blog-list .blog-card h3 a:hover {
+  text-decoration: underline;
+}
+
+.blog-list .blog-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
