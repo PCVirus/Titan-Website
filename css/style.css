@@ -347,3 +347,38 @@ footer {
   font-size: 0.95rem;
   color: #444;
 }
+/* === BLOG POST TEMPLATE === */
+.blog-post {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+  line-height: 1.8;
+}
+
+.blog-post .container {
+  max-width: 800px;
+}
+
+.blog-post .featured-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.blog-post h2 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #0085B5;
+}
+
+.blog-post ul {
+  margin: 1rem 0 2rem 1.5rem;
+}
+
+.blog-post li {
+  margin-bottom: 0.75rem;
+}
+
+.blog-post .button {
+  margin-top: 2rem;
+  display: inline-block;
+}
