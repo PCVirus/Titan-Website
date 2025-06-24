@@ -429,4 +429,24 @@ footer {
     justify-content: center;
   }
 }
+.services-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.services-list li {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.services-list .icon {
+  width: 24px;
+  height: 24px;
+  stroke: #00A651; /* Match your brand green */
+  flex-shrink: 0;
+  margin-top: 2px;
+}
 
