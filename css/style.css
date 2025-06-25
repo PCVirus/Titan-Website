@@ -493,4 +493,28 @@ a:focus-visible, button:focus-visible{
   outline:3px solid #004aad;
   outline-offset:2px;
 }
+/* --- 404 page --------------------------- */
+.notfound {
+  text-align: center;
+  padding: 6rem 1rem 8rem;   /* space above + below */
+}
+
+.notfound h1 {
+  font-size: 2.25rem;        /* 36 px */
+  margin-bottom: 1rem;
+}
+
+.notfound p {
+  font-size: 1.125rem;       /* 18 px */
+}
+
+.notfound a {
+  color: #004aad;
+  text-decoration: underline;
+}
+
+/* optional subtle bg so the block looks intentional */
+body.notfound-page {
+  background-color: #f5f7fa;   /* same pale grey you use elsewhere */
+}
 
