@@ -27,6 +27,12 @@
         <li><a href="/contact.html">Contact</a></li>
       </ul>
     </nav>
+<script>
+  const here = location.pathname.replace(/\/?index\.html$/, '/');
+  document
+    .querySelectorAll('header nav a')
+    .forEach(a => a.getAttribute('href') === here && a.setAttribute('aria-current', 'page'));
+</script>
   </div>
 </header>
 <script>
