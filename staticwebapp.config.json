@@ -5,24 +5,7 @@
     { "route": "/contact.html",  "rewrite": "/contact.html" }
   ],
 
-  "navigationFallback": {
-    "rewrite": "/index.html",
-    "exclude": [
-      "/assets/*",
-      "/css/*",
-      "/js/*",
-      "/partials/*",
-      "/sitemap.xml",
-      "/about.html",
-      "/services.html",
-      "/contact.html"
-    ]
-  },
-
   "responseOverrides": {
-    "404": {
-      "rewrite": "/404.html",
-      "statusCode": 404
-    }
+    "404": { "rewrite": "/404.html", "statusCode": 404 }
   }
 }
