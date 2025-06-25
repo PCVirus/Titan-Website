@@ -455,4 +455,26 @@ button:focus-visible {
   outline: 3px solid #004aad;     /* matches Titan blue */
   outline-offset: 2px;
 }
+/* Accessible skip link: hidden off-screen until focused */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  background: #004aad;     /* Titan blue */
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  z-index: 1000;
+}
 
