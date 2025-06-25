@@ -1,28 +1,10 @@
 {
   "routes": [
-    {
-      "route": "/about.html",
-      "rewrite": "/about.html"
-    },
-    {
-      "route": "/services.html",
-      "rewrite": "/services.html"
-    },
-    {
-      "route": "/contact.html",
-      "rewrite": "/contact.html"
-    }
+    { "route": "/about.html",    "rewrite": "/about.html" },
+    { "route": "/services.html", "rewrite": "/services.html" },
+    { "route": "/contact.html",  "rewrite": "/contact.html" }
   ],
-  "navigationFallback": {
-    "rewrite": "/index.html",
-    "exclude": [
-      "/about.html",
-      "/services.html",
-      "/contact.html"
-    ]
-  }
-}
-{
+
   "navigationFallback": {
     "rewrite": "/index.html",
     "exclude": [
@@ -30,9 +12,13 @@
       "/css/*",
       "/js/*",
       "/partials/*",
-      "/sitemap.xml"
+      "/sitemap.xml",
+      "/about.html",
+      "/services.html",
+      "/contact.html"
     ]
   },
+
   "responseOverrides": {
     "404": {
       "rewrite": "/404.html",
