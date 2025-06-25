@@ -477,4 +477,20 @@ button:focus-visible {
   border-radius: 4px;
   z-index: 1000;
 }
+/* ---- Skip link ---- */
+.skip-link{
+  position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;
+}
+.skip-link:focus,
+.skip-link:focus-visible{
+  left:0;top:0;width:auto;height:auto;
+  background:#004aad;color:#fff;
+  padding:8px 12px;border-radius:4px;z-index:1000;
+}
+
+/* ---- Accessible focus ring for all links/buttons ---- */
+a:focus-visible, button:focus-visible{
+  outline:3px solid #004aad;
+  outline-offset:2px;
+}
 
