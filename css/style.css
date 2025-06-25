@@ -449,4 +449,10 @@ footer {
   flex-shrink: 0;
   margin-top: 4px;
 }
+/* Accessible focus ring */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #004aad;     /* matches Titan blue */
+  outline-offset: 2px;
+}
 
