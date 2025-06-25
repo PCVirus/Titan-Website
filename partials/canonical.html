@@ -1,0 +1,8 @@
+<link rel="canonical" href="">
+<script>
+  // Replace href with current page URL at runtime
+  (function () {
+    const link = document.querySelector('link[rel="canonical"]');
+    if (link && !link.href) link.href = location.origin + location.pathname;
+  })();
+</script>
