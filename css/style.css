@@ -86,10 +86,19 @@ nav a:hover {
 
 /* === OPTIONAL CTA BANNER === */
 .cta-banner {
-  background-color: #00B6EF;
+  background-color: #87c542;
   color: #fff;
   text-align: center;
   padding: 3rem 2rem;
+}
+
+.cta-banner a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.cta-banner a:hover {
+  opacity: 0.85;
 }
 
 .cta-banner h2 {
