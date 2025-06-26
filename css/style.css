@@ -86,7 +86,7 @@ nav a:hover {
 
 /* === OPTIONAL CTA BANNER === */
 .cta-banner {
-  background-color: #87c542;
+  background-color: #04b0eb;      /* Titan blue – original colour */
   color: #fff;
   text-align: center;
   padding: 3rem 2rem;
@@ -124,6 +124,20 @@ nav a:hover {
 
 .cta-banner .button:hover {
   background-color: #003648;
+}
+
+/* green variant – used at page bottom */
+.cta-banner--green {
+  background-color: #87c542;
+}
+
+.cta-banner--green a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.cta-banner--green a:hover {
+  opacity: 0.85;
 }
 
 
