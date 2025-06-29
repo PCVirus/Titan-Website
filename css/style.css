@@ -889,3 +889,15 @@ body.notfound-page {
     gap: 1rem;
   }
 }
+/* ========== fixed header spacing adjustments ========== */
+:root {
+  --header-height: 80px;
+}
+
+html {
+  scroll-padding-top: var(--header-height);
+}
+
+.hero {
+  padding-block-start: calc(var(--header-height) + 1rem);
+}
