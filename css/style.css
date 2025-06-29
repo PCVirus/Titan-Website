@@ -877,3 +877,15 @@ body.notfound-page {
     gap: 2rem;
   }
 }
+
+/* ======== Fallback Mobile Navigation ======== */
+@media (max-width: 768px) {
+  .burger {
+    display: none;
+  }
+  .nav-links {
+    display: flex !important;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
