@@ -541,3 +541,34 @@ body.notfound-page {
   background-color: #f5f7fa;   /* same pale grey you use elsewhere */
 }
 
+/* === HOME PAGE HERO === */
+.home-hero {
+  background-color: #00B6EF;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.home-hero .button {
+  margin-top: 1.5rem;
+}
+
+/* === HOME SERVICES LIST === */
+.home-services {
+  background-color: #fff;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.home-services ul {
+  list-style: none;
+  padding-left: 0;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.home-services li {
+  margin-bottom: 1rem;
+}
+
