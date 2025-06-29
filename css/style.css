@@ -113,7 +113,7 @@ nav a:hover {
 }
 
 .cta-banner .button {
-  background-color: #87c542;
+  background-color: #004861;
   color: #fff;
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
@@ -877,4 +877,3 @@ body.notfound-page {
     gap: 2rem;
   }
 }
-
