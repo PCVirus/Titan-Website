@@ -909,3 +909,9 @@ html {
     color: #e5e5e5;
   }
 }
+/* --- Icon sizing fix --- */
+.card img{
+  width:64px;            /* or 70px if you prefer */
+  height:64px;
+  object-fit:contain;    /* keeps aspect ratio if future icons aren’t square */
+}
