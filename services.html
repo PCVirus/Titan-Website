@@ -45,7 +45,14 @@
 
         <div class="service-cards">
           <div class="card">
-            <img src="/assets/icon-soe.svg" alt="" loading="lazy" width="70" height="70" />
+ <picture>
+    <!-- Modern browsers load the lighter WebP -->
+    <source srcset="/assets/icons/ModernSOE64.webp" type="image/webp">
+    <!-- Fallback for older Safari / email clients -->
+    <img src="/assets/icons/ModernSOE64.png"
+         alt="" aria-hidden="true"
+         loading="lazy" width="64" height="64">
+  </picture>
             <h3>Modern SOE Design & Deployment</h3>
             <p>Cloud-native builds for Windows 11 using Autopilot, policy sets, and automation.</p>
           </div>
