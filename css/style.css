@@ -915,3 +915,10 @@ html {
   height:64px;
   object-fit:contain;    /* keeps aspect ratio if future icons aren’t square */
 }
+/* --- nav bar colour tweak --- */
+.nav-links a{
+  color:#fff;                 /* white primary state */
+}
+.nav-links a:hover{
+  color:#f3f4f6;              /* subtle off-white on hover */
+}
