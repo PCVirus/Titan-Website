@@ -410,7 +410,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1.5rem;
+  padding-top: 0.75rem;
 }
 
 .nav-wrapper .logo {
@@ -891,7 +891,7 @@ body.notfound-page {
 }
 /* ========== fixed header spacing adjustments ========== */
 :root {
-  --header-height: 80px;
+  --header-height: 40px;
 }
 
 html {
@@ -900,6 +900,10 @@ html {
 
 .hero {
   padding-block-start: calc(var(--header-height) + 1rem);
+}
+
+header.hero {
+  padding: 2rem 0 1rem;
 }
 
 /* Dark mode support */
