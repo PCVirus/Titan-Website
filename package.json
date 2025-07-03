@@ -4,11 +4,14 @@
   "description": "Public Site for Titan Solutions - built with HTML/CSS",
   "main": "tailwind.config.js",
   "scripts": {
-    "build": "eleventy",
-    "start": "eleventy --serve --watch"
+    "build": "npx eleventy",
+    "start": "npx eleventy --serve --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
 }
