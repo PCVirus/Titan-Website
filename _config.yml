@@ -1,3 +1,4 @@
-baseurl: "" # Leave empty unless site is hosted under a subdirectory
+url: "https://www.titansolutions.com.au"
+baseurl: ""
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title.html
