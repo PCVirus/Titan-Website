@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "Public Site for Titan Solutions - built with HTML/CSS",
   "main": "tailwind.config.js",
-  "scripts": {
-    "build": "eleventy",
-    "start": "eleventy --serve --watch"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
