@@ -952,3 +952,16 @@ header.hero {
   height:64px;
   object-fit:contain;    /* keeps aspect ratio if future icons aren’t square */
 }
+
+/* Blog post image tweaks */
+.blog-post img,
+.blog-post figure img {
+  max-width: 100%; /* never exceed container */
+  height: auto;    /* preserve aspect */
+  display: block;  /* kill extra whitespace */
+}
+
+.featured-image {
+  width: 100%;     /* full-bleed hero */
+  object-fit: cover;/* optional crop, keeps ratio */
+}
