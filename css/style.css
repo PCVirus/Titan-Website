@@ -405,6 +405,33 @@ footer {
   margin-top: 2rem;
   display: inline-block;
 }
+
+/* Post date styling */
+.blog-post .post-dates {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Comparison table styling */
+.comparison {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.comparison th,
+.comparison td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.comparison thead {
+  background-color: #f0f0f0;
+  font-weight: 600;
+}
 /* === NAVIGATION WRAPPER === */
 .nav-wrapper {
   display: flex;
