@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <div data-include="/partials/head-assets.html"></div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Is Modern Endpoint Management? | Titan Solutions AU</title>
+  <link rel="canonical" href="https://titansolutions.com.au/blog/blog-modern-endpoint-management.html">
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <!-- SEO -->
+  <meta name="description" content="Learn how cloud-based Intune streamlines device deployment, security and updates for Aussie SMBs. Plain-English guide plus free migration checklist.">
+  <meta name="author" content="Titan Solutions">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:image" content="/assets/blog-og/og-modern-endpoint-management.webp">
+  <meta property="og:logo" content="/assets/Titan Solutions__Logomark.png">
+  <meta property="og:title" content="What Is Modern Endpoint Management? A Plain-English Guide for SMBs">
+  <meta property="og:description" content="Learn how cloud-based Intune streamlines device deployment, security and updates for Aussie SMBs. Plain-English guide plus free migration checklist.">
+  <meta property="og:url" content="https://titansolutions.com.au/blog/blog-modern-endpoint-management.html">
+  <meta property="og:type" content="article">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What Is Modern Endpoint Management? A Plain-English Guide for SMBs">
+  <meta name="twitter:description" content="Learn how cloud-based Intune streamlines device deployment, security and updates for Aussie SMBs. Plain-English guide plus free migration checklist.">
+  <meta name="twitter:image" content="/assets/blog-og/og-modern-endpoint-management.webp">
+
+  <!-- Analytics & Includes -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "s2eswuyn97");
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3NMJ4MD06"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q3NMJ4MD06');
+  </script>
+
+  <script src="/js/includes.js" defer></script>
+
+  <!-- Article meta -->
+    <meta property="article:published_time" content="{{PUBLISHED_DATE_ISO}}">
+    <meta property="og:publish_date"        content="{{PUBLISHED_DATE_ISO}}">
+    <meta name="datePublished"              content="{{PUBLISHED_DATE_ISO}}">
+
+</head>
+
+<body>
+  <div data-include="/partials/header.html"></div>
+
+  <main id="main">
+    <article class="blog-post">
+      <div class="container">
+
+        <!-- Featured Image -->
+        <img src="/assets/blog-og/og-modern-endpoint-management.webp"
+             alt="Employee unboxing a new laptop symbolising modern endpoint management"
+             class="featured-image" loading="lazy" width="640" height="360" />
+
+        <!-- Blog Content -->
+        <h1>What Is Modern Endpoint Management? A Plain-English Guide for SMBs</h1>
+        <p class="post-dates">
+  <time datetime="{{2024-01-15}}" class="published">
+    Published 15&nbsp;January&nbsp;2024
+  </time>
+  <span class="separator">|</span>
+  <time datetime="2025-07-01" class="updated">
+    Last updated 1 July 2025
+  </time>
+</p>
+
+
+        <blockquote class="tl-dr">
+          <strong>TL;DR&nbsp;&rarr;</strong>&nbsp;Modern Endpoint Management (MEM) is a cloud-first way to deploy, secure and update every laptop, tablet and phone your business owns <strong>without</strong> on-prem servers or manual touch-ups. Think zero-touch provisioning, real-time compliance and analytics—all delivered through Microsoft Intune.
+        </blockquote>
+
+        <h2>1. Why This Matters to Sub-200 Seat Firms</h2>
+        <p>Running patch-night at midnight or driving across town to re-image a sales rep’s laptop isn’t a good use of anyone’s time. MEM lets a lean IT team (or even a solo admin) ship hardware straight from the distributor to the end-user, confident that:</p>
+        <ul>
+          <li>The device <strong>self-configures</strong> on first boot via <a href="/blog/blog-autopilot.html">Windows Autopilot</a>.</li>
+          <li>Security baselines and Conditional Access apply automatically.</li>
+          <li>You can prove ACSC Essential Eight compliance at audit time.</li>
+        </ul>
+
+        <figure>
+          <img src="/images/hero-mem-unboxing.webp"
+               alt="Warehouse staff unboxing a Surface Laptop representing zero-touch enrolment"
+               loading="lazy" width="1280" height="720">
+          <figcaption>Out-of-box Autopilot enrolment—no IT hands required.</figcaption>
+        </figure>
+
+        <h2>2. Traditional vs Modern Management (Quick Refresher)</h2>
+
+        <table class="comparison">
+          <thead>
+            <tr><th scope="col">Traditional</th><th scope="col">Modern</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>On-prem&nbsp;AD / domain join</td><td>Azure AD / cloud join</td></tr>
+            <tr><td>Task-sequence imaging</td><td>Windows Autopilot (zero-touch)</td></tr>
+            <tr><td>SCCM + GPOs</td><td>Microsoft Intune (UEM)</td></tr>
+            <tr><td>Corporate LAN / VPN</td><td>Public internet</td></tr>
+            <tr><td>Perimeter-based security</td><td>Zero-Trust with Conditional Access</td></tr>
+          </tbody>
+        </table>
+
+        <figure>
+          <img src="/images/infographic-traditional-vs-modern.webp"
+               alt="Infographic comparing traditional endpoint management to modern cloud-first approach"
+               loading="lazy" width="1200" height="1800">
+        </figure>
+
+        <h2>3. Five Core Pillars of Modern Endpoint Management</h2>
+        <ol>
+          <li><strong>Cloud-native provisioning</strong> – Autopilot registers the serial at purchase; users sign in and everything else is automated.</li>
+          <li><strong>Unified policy engine</strong> – Intune delivers OS settings, apps, BitLocker keys and compliance rules from one portal.</li>
+          <li><strong>Real-time compliance</strong> – Non-compliant devices are blocked from email and SharePoint until fixed.</li>
+          <li><strong>Built-in analytics</strong> – Endpoint Analytics scores boot times, app crashes and firmware health so you can pre-empt tickets.</li>
+          <li><strong>Zero-Trust alignment</strong> – Maps neatly to ACSC Essential Eight controls.</li>
+        </ol>
+
+        <h2>4. Five Myths (and the Facts)</h2>
+        <table class="comparison">
+          <thead><tr><th scope="col">Myth</th><th scope="col">Fact for SMBs</th></tr></thead>
+          <tbody>
+            <tr><td>“Modern management is only for enterprises.”</td><td>Intune Business Premium includes the same MEM engine—no servers required.</td></tr>
+            <tr><td>“You still need a VPN for software deployment.”</td><td>Intune uses Microsoft’s CDN; no VPN means fewer headaches.</td></tr>
+            <tr><td>“Zero-touch means zero security.”</td><td>Security baselines &amp; Conditional Access enforce encryption and MFA from minute one.</td></tr>
+            <tr><td>“It’s too expensive.”</td><td>Per-user licensing replaces server hardware, CALs and after-hours patching.</td></tr>
+            <tr><td>“Hybrid AD is safer.”</td><td>Hybrid doubles your attack surface; cloud-only with Conditional Access is simpler and often more secure.</td></tr>
+          </tbody>
+        </table>
+
+        <figure>
+          <img src="/images/intune-dashboard.webp"
+               alt="Microsoft Intune Endpoint Analytics dashboard showing device compliance score"
+               loading="lazy" width="1280" height="720">
+        </figure>
+
+        <h2>5. Practical Benefits You’ll Notice This Quarter</h2>
+        <ul>
+          <li><strong>Hours not weeks</strong> to onboard new hires—devices ship direct from your distributor.</li>
+          <li><strong>Predictable cashflow</strong>—shift CapEx (servers) to OpEx (licences).</li>
+          <li><strong>Happier staff</strong>—no VPN, faster logons, fewer forced reboots.</li>
+          <li><strong>Audit-ready posture</strong>—Intune reports support Essential Eight Level 1 evidence.</li>
+          <li><strong>Scalable security</strong>—BitLocker keys stored in Entra ID and remote wipe in two clicks.</li>
+        </ul>
+
+        <h2>6. Getting Started: A Four-Step Roadmap</h2>
+        <ol>
+          <li><strong>Pick a licence:</strong> Business Premium ≤300 seats; E3 for bigger orgs.</li>
+          <li><strong>Baseline security:</strong> Enable Windows 11 Security Baseline + five starter Conditional Access policies.</li>
+          <li><strong>Automate provisioning:</strong> Register hardware IDs with Autopilot; build a “Standard Laptop” profile.</li>
+          <li><strong>Measure &amp; iterate:</strong> Review Endpoint Analytics weekly; run quarterly Essential Eight self-assessments.</li>
+        </ol>
+
+        <aside class="lead-magnet">
+          <p><strong>Free download &rarr;</strong> Grab our <a href="/resources/gpo-to-intune-checklist.pdf">GPO-to-Intune Migration Checklist</a> to plan your move.</p>
+        </aside>
+
+        <h2>7. FAQs</h2>
+        <h3>Does Intune replace Group Policy?</h3>
+        <p>For most modern Windows 11 settings, yes. Legacy GPOs can be replicated with Settings Catalog or imported ADMX files.</p>
+
+        <h3>How much bandwidth does Autopilot use?</h3>
+        <p>Roughly the size of your app payloads; content is pulled from Microsoft’s CDN, not your office WAN.</p>
+
+        <h2>8. Next Steps</h2>
+        <p>Still ghost-imaging? <a href="/bookings.html">Book a 30-minute Endpoint Health Check</a> and we’ll design a tailored MEM rollout plan.</p>
+
+        <p class="post-tags">
+          Tags: <a href="/tags/intune.html">Intune</a>, <a href="/tags/endpoint-management.html">Endpoint Management</a>, <a href="/tags/autopilot.html">Autopilot</a>
+        </p>
+
+        <a href="../blog.html" class="button">&larr; Back to Blog</a>
+      </div>
+    </article>
+  </main>
+
+  <div data-include="/partials/cta-banner.html"></div>
+  <div data-include="/partials/footer.html"></div>
+</body>
+</html>
