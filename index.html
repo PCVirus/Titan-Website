@@ -1,310 +1,1008 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-AU">
 <head>
-  <div data-include="/partials/head-assets.html"></div>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Titan Solutions</title>
-  <meta name="theme-color" content="#0085B5" />
-  <meta name="color-scheme" content="light dark" />
-  <link rel="stylesheet" href="/css/style.css" />
-<!-- SEO -->
-<meta name="description" content="Titan Solutions helps SMBs transform their IT environment with expert Microsoft 365, Intune, and modern cloud-native strategies, offering practical, secure, and scalable solutions.">
-<meta name="author" content="Titan Solutions">
-<meta name="robots" content="index, follow">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Titan Solutions — Independent MSP & IT Spend Review</title>
+<link rel="stylesheet" href="colors_and_type.css" />
+<style>
+  /* =========================================================
+     Page-level resets + tokens specific to this advisory site.
+     The advisory practice reads quieter than the parent brand
+     site: navy ink on warm off-white, no gradients, no orange,
+     no emoji. One accent (Titan blue) reserved for the CTA.
+  ========================================================= */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: 1.55;
+  }
 
-<!-- Social Sharing (Open Graph) -->
-<meta property="og:title" content="Titan Solutions – Modern IT Consulting for SMBs">
-<meta property="og:description" content="Titan Solutions helps SMBs transform their IT environment with expert Microsoft 365, Intune, and modern cloud-native strategies, offering practical, secure, and scalable solutions.">
-<meta property="og:image" content="/assets/og-default.jpg">
-<meta property="og:logo" content="/assets/Titan Solutions__Logomark.png">
-<meta property="og:url" content="https://titansolutions.com.au/index.html">
-<meta property="og:type" content="website">
+  :root {
+    --paper:       #F4F1EA;          /* warm off-white, advisor-feeling */
+    --paper-deep:  #ECE7DC;
+    --paper-card:  #FBF9F4;
+    --ink:         #14202E;          /* near-black navy */
+    --ink-2:       #2A3645;
+    --ink-3:       #4A5566;
+    --ink-mute:    #76808E;
+    --rule:        #D8D2C4;
+    --rule-soft:   #E5E0D2;
+    --accent:      var(--titan-navy);    /* #2C5AA0 */
+    --accent-deep: var(--titan-navy-deep);
+    --accent-line: var(--titan-blue);    /* #0085B5 — for thin rules */
+    --max:         1180px;
+    --gutter:      clamp(20px, 4vw, 56px);
+  }
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Titan Solutions – Modern IT Consulting for SMBs">
-<meta name="twitter:description" content="Titan Solutions helps SMBs transform their IT environment with expert Microsoft 365, Intune, and modern cloud-native strategies, offering practical, secure, and scalable solutions.">
-<meta name="twitter:image" content="/assets/og-default.jpg">
+  ::selection { background: var(--accent); color: #fff; }
 
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "s2eswuyn97");
-</script>
+  a { color: inherit; }
+  img, svg { display: block; max-width: 100%; }
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3NMJ4MD06"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  .container {
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+  }
 
-  gtag('config', 'G-Q3NMJ4MD06');
-</script>
-  <div data-include="/partials/canonical.html"></div>
-  <script src="/js/includes.js" defer></script>
+  /* =========================================================
+     Header — minimal. Logo left, single CTA right.
+  ========================================================= */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(244, 241, 234, 0.92);
+    backdrop-filter: saturate(140%) blur(10px);
+    -webkit-backdrop-filter: saturate(140%) blur(10px);
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+  .brand-lockup {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+  .brand-lockup img { height: 28px; width: auto; }
+  .brand-lockup__divider {
+    width: 1px;
+    height: 22px;
+    background: var(--rule);
+  }
+  .brand-lockup__advisory {
+    font-family: var(--font-display-alt), var(--font-sans);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    font-weight: 700;
+  }
+  .header-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent-deep);
+    text-decoration: none;
+    padding: 10px 16px;
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-xs);
+    transition: background var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
+  }
+  .header-cta:hover { background: var(--accent); color: #fff; }
+  .header-cta__arrow { transition: transform var(--t-fast) var(--ease); }
+  .header-cta:hover .header-cta__arrow { transform: translateX(3px); }
+
+  /* =========================================================
+     Eyebrow — recurring small caps label
+  ========================================================= */
+  .eyebrow {
+    font-family: var(--font-display-alt), var(--font-sans);
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ink-3);
+    margin: 0 0 28px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--accent-line);
+  }
+
+  /* =========================================================
+     HERO
+  ========================================================= */
+  .hero {
+    padding: clamp(72px, 12vw, 160px) 0 clamp(72px, 10vw, 140px);
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero__inner { position: relative; }
+  .hero__head {
+    max-width: 980px;
+  }
+  .hero__h1 {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0 0 28px;
+    font-size: clamp(38px, 6.4vw, 84px);
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  .hero__h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .hero__sub {
+    max-width: 640px;
+    font-size: clamp(18px, 1.6vw, 22px);
+    color: var(--ink-3);
+    line-height: 1.45;
+    margin: 0 0 44px;
+    font-weight: 400;
+  }
+  .hero__cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 28px 32px;
+  }
+  .hero__cta-meta {
+    font-size: 14px;
+    color: var(--ink-mute);
+    line-height: 1.4;
+    max-width: 280px;
+  }
+  .hero__meta-row {
+    margin-top: clamp(64px, 10vw, 110px);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    padding-top: 28px;
+  }
+  .hero__meta-cell {
+    padding: 4px 24px 4px 0;
+    border-right: 1px solid var(--rule-soft);
+  }
+  .hero__meta-cell:last-child { border-right: none; padding-right: 0; }
+  .hero__meta-label {
+    font-family: var(--font-display-alt), var(--font-sans);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin: 0 0 10px;
+    font-weight: 700;
+  }
+  .hero__meta-value {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--ink);
+    margin: 0;
+    letter-spacing: -0.005em;
+  }
+  @media (max-width: 720px) {
+    .hero__meta-row { grid-template-columns: 1fr 1fr; gap: 24px 0; }
+    .hero__meta-cell:nth-child(2) { border-right: none; }
+  }
+
+  /* =========================================================
+     CTA Buttons
+  ========================================================= */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 17px;
+    text-decoration: none;
+    padding: 18px 28px;
+    border-radius: var(--radius-xs);
+    transition: transform var(--t-fast) var(--ease),
+                background var(--t-fast) var(--ease),
+                box-shadow var(--t-fast) var(--ease);
+    cursor: pointer;
+    border: none;
+    line-height: 1;
+    letter-spacing: -0.005em;
+  }
+  .btn--primary {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 1px 0 rgba(20,32,46,0.2), 0 6px 18px rgba(44,90,160,0.18);
+  }
+  .btn--primary:hover {
+    background: var(--accent-deep);
+    transform: translateY(-1px);
+    box-shadow: 0 1px 0 rgba(20,32,46,0.2), 0 10px 22px rgba(44,90,160,0.22);
+  }
+  .btn--primary:focus-visible {
+    outline: 3px solid var(--titan-focus);
+    outline-offset: 3px;
+  }
+  .btn__arrow {
+    width: 18px; height: 18px; flex: 0 0 18px;
+    transition: transform var(--t-fast) var(--ease);
+  }
+  .btn:hover .btn__arrow { transform: translateX(4px); }
+
+  /* =========================================================
+     Section scaffolding
+  ========================================================= */
+  section { padding: clamp(72px, 10vw, 130px) 0; }
+  .section-rule { border-top: 1px solid var(--rule); }
+  .section-head { max-width: 760px; margin: 0 0 64px; }
+  .section-head__h {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    color: var(--ink);
+    font-size: clamp(30px, 3.8vw, 48px);
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+    margin: 0 0 18px;
+    text-wrap: balance;
+  }
+  .section-head__h em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .section-head__sub {
+    font-size: 19px;
+    color: var(--ink-3);
+    line-height: 1.5;
+    margin: 0;
+    max-width: 620px;
+  }
+
+  /* =========================================================
+     Problem section — three numbered statement blocks
+  ========================================================= */
+  .problems {
+    background: var(--paper-deep);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .problems__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+  }
+  .problem {
+    padding: 48px 36px 48px 0;
+    border-right: 1px solid var(--rule-soft);
+    position: relative;
+  }
+  .problem:last-child { border-right: none; padding-right: 0; }
+  .problem:not(:first-child) { padding-left: 36px; }
+  .problem__num {
+    font-family: var(--font-display-alt), var(--font-sans);
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin: 0 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .problem__num::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+  .problem__statement {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: clamp(20px, 1.8vw, 24px);
+    line-height: 1.35;
+    color: var(--ink);
+    margin: 0;
+    letter-spacing: -0.005em;
+    text-wrap: pretty;
+  }
+  @media (max-width: 880px) {
+    .problems__grid { grid-template-columns: 1fr; }
+    .problem { border-right: none; border-bottom: 1px solid var(--rule-soft); padding: 36px 0; }
+    .problem:not(:first-child) { padding-left: 0; }
+    .problem:last-child { border-bottom: none; }
+  }
+
+  /* =========================================================
+     Deliverables section — 4-up grid
+  ========================================================= */
+  .deliverables__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    border-left: 1px solid var(--rule);
+  }
+  .deliverable {
+    padding: 44px 40px;
+    background: var(--paper-card);
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: background var(--t-fast) var(--ease);
+  }
+  .deliverable:hover { background: #fff; }
+  .deliverable__num {
+    font-family: var(--font-display-alt), var(--font-sans);
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    font-weight: 700;
+    margin: 0;
+  }
+  .deliverable__title {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: clamp(20px, 1.8vw, 24px);
+    line-height: 1.25;
+    color: var(--ink);
+    margin: 0;
+    letter-spacing: -0.01em;
+    max-width: 360px;
+  }
+  .deliverable__desc {
+    font-size: 15.5px;
+    color: var(--ink-3);
+    line-height: 1.55;
+    margin: 0;
+    max-width: 380px;
+  }
+  @media (max-width: 720px) {
+    .deliverables__grid { grid-template-columns: 1fr; }
+  }
+
+  /* =========================================================
+     How it works — three steps, vertical timeline feel
+  ========================================================= */
+  .process__list {
+    display: grid;
+    gap: 0;
+    counter-reset: step;
+  }
+  .process__step {
+    display: grid;
+    grid-template-columns: minmax(140px, 200px) 1fr;
+    gap: clamp(24px, 5vw, 64px);
+    padding: 44px 0;
+    border-top: 1px solid var(--rule);
+    align-items: start;
+  }
+  .process__step:last-child { border-bottom: 1px solid var(--rule); }
+  .process__step-marker {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .process__step-num {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: clamp(38px, 5vw, 56px);
+    line-height: 1;
+    color: var(--accent);
+    letter-spacing: -0.025em;
+  }
+  .process__step-label {
+    font-family: var(--font-display-alt), var(--font-sans);
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    font-weight: 700;
+  }
+  .process__step-body {
+    max-width: 640px;
+  }
+  .process__step-title {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: clamp(22px, 2.2vw, 28px);
+    line-height: 1.25;
+    color: var(--ink);
+    margin: 0 0 12px;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .process__step-desc {
+    font-size: 17px;
+    color: var(--ink-3);
+    line-height: 1.55;
+    margin: 0;
+  }
+  @media (max-width: 720px) {
+    .process__step { grid-template-columns: 1fr; gap: 12px; padding: 32px 0; }
+  }
+
+  /* =========================================================
+     Investment / pricing
+  ========================================================= */
+  .investment {
+    background: var(--ink);
+    color: #fff;
+  }
+  .investment .section-head__h { color: #fff; }
+  .investment .section-head__h em { color: #ffd47a; }
+  .investment .section-head__sub { color: rgba(255,255,255,0.72); }
+  .investment .eyebrow { color: rgba(255,255,255,0.7); }
+  .investment .eyebrow::before { background: #ffd47a; }
+
+  .invest-card {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, 6vw, 80px);
+    align-items: center;
+    padding: clamp(36px, 5vw, 64px) 0 0;
+    border-top: 1px solid rgba(255,255,255,0.14);
+  }
+  .invest-price-block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .invest-price {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    font-family: var(--font-sans);
+    color: #fff;
+    line-height: 1;
+  }
+  .invest-price__currency {
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 400;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: -0.01em;
+  }
+  .invest-price__amount {
+    font-size: clamp(72px, 11vw, 140px);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+  }
+  .invest-price__suffix {
+    font-family: var(--font-display-alt), var(--font-sans);
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    font-weight: 700;
+  }
+  .invest-fineprint {
+    font-size: 16px;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.55;
+    margin: 0;
+    max-width: 480px;
+  }
+  .invest-terms {
+    display: grid;
+    gap: 0;
+  }
+  .invest-term {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 24px;
+    padding: 18px 0;
+    border-top: 1px solid rgba(255,255,255,0.14);
+    align-items: baseline;
+  }
+  .invest-term:last-child { border-bottom: 1px solid rgba(255,255,255,0.14); }
+  .invest-term__label {
+    font-family: var(--font-display-alt), var(--font-sans);
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    font-weight: 700;
+  }
+  .invest-term__value {
+    font-size: 17px;
+    color: #fff;
+    line-height: 1.45;
+    font-weight: 400;
+  }
+  .invest-term__value strong { font-weight: 700; }
+
+  .invest-cta-row {
+    margin-top: clamp(48px, 6vw, 72px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+  }
+  .investment .btn--primary {
+    background: #fff;
+    color: var(--ink);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  }
+  .investment .btn--primary:hover { background: #ffd47a; color: var(--ink); }
+  .invest-cta-meta {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.45;
+    max-width: 320px;
+  }
+  @media (max-width: 760px) {
+    .invest-card { grid-template-columns: 1fr; }
+  }
+
+  /* =========================================================
+     Trust bar
+  ========================================================= */
+  .trust__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .trust__cell {
+    padding: 48px 36px 48px 0;
+    border-right: 1px solid var(--rule-soft);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .trust__cell:last-child { border-right: none; padding-right: 0; }
+  .trust__cell:not(:first-child) { padding-left: 36px; }
+  .trust__icon {
+    width: 28px; height: 28px;
+    color: var(--accent);
+  }
+  .trust__statement {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: clamp(17px, 1.5vw, 20px);
+    line-height: 1.35;
+    color: var(--ink);
+    margin: 0;
+    letter-spacing: -0.005em;
+  }
+  @media (max-width: 880px) {
+    .trust__grid { grid-template-columns: 1fr; }
+    .trust__cell { border-right: none; border-bottom: 1px solid var(--rule-soft); padding: 32px 0; }
+    .trust__cell:not(:first-child) { padding-left: 0; }
+    .trust__cell:last-child { border-bottom: none; }
+  }
+
+  /* =========================================================
+     Footer
+  ========================================================= */
+  .site-footer {
+    background: var(--paper-deep);
+    padding: 64px 0 48px;
+    border-top: 1px solid var(--rule);
+  }
+  .site-footer__top {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 32px;
+    align-items: start;
+    padding-bottom: 36px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .site-footer__brand img { height: 32px; }
+  .site-footer__meta {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 40px;
+    text-align: right;
+  }
+  .site-footer__meta-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-end;
+  }
+  .site-footer__meta-label {
+    font-family: var(--font-display-alt), var(--font-sans);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    font-weight: 700;
+  }
+  .site-footer__meta-value {
+    font-size: 15px;
+    color: var(--ink-2);
+    font-weight: 400;
+  }
+  .site-footer__meta-value a { color: var(--accent-deep); text-decoration: none; }
+  .site-footer__meta-value a:hover { text-decoration: underline; }
+  .site-footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-top: 28px;
+  }
+  .site-footer__disclaimer {
+    font-size: 14px;
+    color: var(--ink-mute);
+    max-width: 720px;
+    line-height: 1.5;
+    margin: 0;
+    font-style: italic;
+  }
+  .site-footer__copyright {
+    font-size: 13px;
+    color: var(--ink-mute);
+    margin: 0;
+  }
+  @media (max-width: 760px) {
+    .site-footer__top { grid-template-columns: 1fr; }
+    .site-footer__meta { grid-template-columns: 1fr; gap: 20px; text-align: left; }
+    .site-footer__meta-cell { align-items: flex-start; }
+  }
+
+  /* Skip link */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--accent);
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: var(--radius-xs);
+    z-index: 100;
+    font-weight: 600;
+  }
+  .skip-link:focus { left: 16px; top: 16px; }
+
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--titan-focus);
+    outline-offset: 3px;
+  }
+</style>
 </head>
-
 <body>
-  <div data-include="/partials/header.html"></div>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- Hero banner -->
-  <section class="hero">
-    <div class="container">
-      <h1>Complete IT Solutions That Scale With Your Business</h1>
-      <p class="subtitle">Australian SMBs trust Titan Solutions for secure, modern IT that drives productivity and protects their bottom line</p>
-      <div class="value-props">
-        <div class="value-prop">24/7 monitoring and support</div>
-        <div class="value-prop">Cybersecurity that actually works</div>
-        <div class="value-prop">Cloud-first solutions that grow with you</div>
-      </div>
-      <div class="cta-buttons">
-        <a href="#assessment" class="btn-primary">Get Your Free IT Assessment</a>
-        <a href="#services" class="btn-secondary">View Our Services</a>
-      </div>
-      <p class="trust-indicator">Trusted by 50+ growing Australian businesses</p>
-    </div>
-  </section>
-
-<main id="main">
-
-    <!-- Services overview -->
-    <section class="services" id="services">
-      <div class="container">
-        <h2 class="section-title">Comprehensive IT Services</h2>
-        <p class="section-subtitle">Everything your business needs to stay secure, productive, and competitive</p>
-
-        <div class="services-grid">
-          <div class="service-card">
-            <span class="service-icon">🛡️</span>
-            <h3>Managed IT Services</h3>
-            <p>Complete IT management so you can focus on growing your business</p>
-            <ul class="service-features">
-              <li>24/7 monitoring and support</li>
-              <li>Proactive maintenance and updates</li>
-              <li>Strategic IT planning and roadmapping</li>
-              <li>Help desk and user support</li>
-            </ul>
-            <a href="#" class="btn-primary">Learn More</a>
-          </div>
-
-          <div class="service-card">
-            <span class="service-icon">🔒</span>
-            <h3>Cybersecurity Solutions</h3>
-            <p>Multi-layered protection that adapts to evolving threats</p>
-            <ul class="service-features">
-              <li>Advanced threat detection and response</li>
-              <li>Employee security training</li>
-              <li>Compliance and risk assessment</li>
-              <li>Incident response and recovery</li>
-            </ul>
-            <a href="#" class="btn-primary">Learn More</a>
-          </div>
-
-          <div class="service-card">
-            <span class="service-icon">☁️</span>
-            <h3>Microsoft 365 &amp; Intune</h3>
-            <p>Modern workplace solutions with enterprise-grade security</p>
-            <ul class="service-features">
-              <li>Complete M365 implementation</li>
-              <li>Intune device management</li>
-              <li>Security and compliance configuration</li>
-              <li>User adoption and training</li>
-            </ul>
-            <a href="#" class="btn-primary">Learn More</a>
-          </div>
-
-          <div class="service-card">
-            <span class="service-icon">📞</span>
-            <h3>Teams Calling &amp; VoIP</h3>
-            <p>Modern telephony that integrates with your digital workplace</p>
-            <ul class="service-features">
-              <li>Teams Phone implementation</li>
-              <li>Complete telephony modernisation</li>
-              <li>Call management and analytics</li>
-              <li>Mobile and remote work support</li>
-            </ul>
-            <a href="#" class="btn-primary">Learn More</a>
-          </div>
-
-          <div class="service-card">
-            <span class="service-icon">🤖</span>
-            <h3>AI &amp; Automation</h3>
-            <p>Harness AI to boost productivity and streamline operations</p>
-            <ul class="service-features">
-              <li>Copilot for Microsoft 365 implementation</li>
-              <li>Process automation and efficiency gains</li>
-              <li>AI strategy and adoption support</li>
-              <li>Custom automation solutions</li>
-            </ul>
-            <a href="#" class="btn-primary">Learn More</a>
-          </div>
-
-          <div class="service-card">
-            <span class="service-icon">🚀</span>
-            <h3>Cloud Migration &amp; Consulting</h3>
-            <p>Strategic cloud transformation that drives growth</p>
-            <ul class="service-features">
-              <li>Strategic cloud transformation</li>
-              <li>Legacy system modernisation</li>
-              <li>Ongoing optimisation and cost management</li>
-              <li>Business continuity planning</li>
-            </ul>
-            <a href="#" class="btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="problems">
-      <div class="container">
-        <h2 class="section-title">Common IT Challenges We Solve</h2>
-        <p class="section-subtitle">Stop fighting IT fires and start leveraging technology for growth</p>
-
-        <div class="problems-grid">
-          <div>
-            <div class="problem-solution">
-              <div class="problem-icon">⚠️</div>
-              <div class="problem-content">
-                <h4>Constant IT fires disrupting operations</h4>
-                <p>Unexpected downtime, slow systems, and frustrated employees</p>
-              </div>
-            </div>
-            <div class="problem-solution" style="margin-top: 2rem;">
-              <div class="solution-icon">✅</div>
-              <div class="solution-content">
-                <h4>Proactive monitoring prevents 95% of issues</h4>
-                <p>Our 24/7 monitoring catches problems before they impact your team</p>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div class="problem-solution">
-              <div class="problem-icon">🎯</div>
-              <div class="problem-content">
-                <h4>Cybersecurity threats keeping you awake</h4>
-                <p>Worried about ransomware, data breaches, and regulatory compliance</p>
-              </div>
-            </div>
-            <div class="problem-solution" style="margin-top: 2rem;">
-              <div class="solution-icon">🛡️</div>
-              <div class="solution-content">
-                <h4>Multi-layered security that adapts</h4>
-                <p>Enterprise-grade protection designed for evolving threats</p>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div class="problem-solution">
-              <div class="problem-icon">💰</div>
-              <div class="problem-content">
-                <h4>IT costs spiralling out of control</h4>
-                <p>Unpredictable expenses and poor return on technology investment</p>
-              </div>
-            </div>
-            <div class="problem-solution" style="margin-top: 2rem;">
-              <div class="solution-icon">📊</div>
-              <div class="solution-content">
-                <h4>Predictable costs with strategic optimisation</h4>
-                <p>Fixed monthly pricing with continuous cost management</p>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div class="problem-solution">
-              <div class="problem-icon">⛔</div>
-              <div class="problem-content">
-                <h4>Technology holding back growth</h4>
-                <p>Outdated systems limiting productivity and scalability</p>
-              </div>
-            </div>
-            <div class="problem-solution" style="margin-top: 2rem;">
-              <div class="solution-icon">🚀</div>
-              <div class="solution-content">
-                <h4>Scalable solutions that grow with you</h4>
-                <p>Modern, cloud-first technology that enables expansion</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="social-proof">
-      <div class="container">
-        <h2 class="section-title" style="color: white;">Trusted by Growing Australian Businesses</h2>
-
-        <div class="metrics">
-          <div class="metric">
-            <span class="metric-number">99.9%</span>
-            <span class="metric-label">Uptime Guarantee</span>
-          </div>
-          <div class="metric">
-            <span class="metric-number">15min</span>
-            <span class="metric-label">Average Response Time</span>
-          </div>
-          <div class="metric">
-            <span class="metric-number">40%</span>
-            <span class="metric-label">Average Cost Reduction</span>
-          </div>
-          <div class="metric">
-            <span class="metric-number">50+</span>
-            <span class="metric-label">Happy Clients</span>
-          </div>
-        </div>
-
-        <p style="font-size: 1.2rem; opacity: 0.9;">"Titan Solutions transformed our IT from a constant headache into a competitive advantage. Their proactive approach means we rarely have IT issues, and when we do, they're resolved before we even notice."</p>
-        <p style="margin-top: 1rem; opacity: 0.8;">- Sarah Chen, Managing Director, Growth Marketing Solutions</p>
-      </div>
-    </section>
-
-    <section class="final-cta" id="assessment">
-      <div class="container">
-        <h2>Ready to Transform Your IT?</h2>
-        <p>Get your free IT assessment and discover how Titan Solutions can help your business grow</p>
-        <div class="cta-buttons">
-          <a href="#" class="btn-primary" style="background: white; color: #f39c12;">Book Your Free Assessment</a>
-          <a href="tel:1300-TITAN-1" class="btn-secondary" style="border-color: white;">Call (02) 1234 5678</a>
-        </div>
-      </div>
-    </section>
-
-<section class="blog-preview">
-  <div class="container">
-    <h2>From Our Blog</h2>
-    <p class="intro">Latest insights on Microsoft 365, endpoint management, and IT best practices.</p>
-
-    <div class="blog-cards">
-      <a href="blog/blog-autopilot.html" class="blog-card">
-        <img src="assets/blog-placeholder-1.jpg" alt="Blog Post 1" loading="lazy" width="640" height="360">
-        <h3>Why Autopilot is a Game-Changer for Device Deployment</h3>
-        <p>Explore how Windows Autopilot simplifies device setup and user provisioning in modern workplaces.</p>
-        <span class="read-more">Read More →</span>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="#" class="brand-lockup" aria-label="Titan Solutions home">
+        <img src="assets/Titan-Solutions-Horizontal.svg" alt="Titan Solutions" />
+        <span class="brand-lockup__divider" aria-hidden="true"></span>
+        <span class="brand-lockup__advisory">Advisory</span>
       </a>
-
-      <a href="blog/blog-intune-policies.html" class="blog-card">
-        <img src="assets/blog-placeholder-2.jpg" alt="Blog Post 2" loading="lazy" width="640" height="360">
-        <h3>Top 5 Intune Policies Every SMB Should Use</h3>
-        <p>A practical breakdown of essential Intune settings to boost security and streamline management.</p>
-        <span class="read-more">Read More →</span>
+      <a class="header-cta" href="#book" aria-label="Book a free 15-minute call">
+        Book a 15-min call
+        <svg class="header-cta__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </a>
     </div>
-  </div>
-</section>
-    
+  </header>
 
+  <main id="main">
 
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" data-screen-label="01 Hero">
+      <div class="container hero__inner">
+        <div class="hero__head">
+          <p class="eyebrow">Independent IT Spend Review</p>
+          <h1 class="hero__h1">
+            The IT review your MSP <em>hopes</em> you never commission.
+          </h1>
+          <p class="hero__sub">
+            Independent eyes on your IT spend. No vendor agenda.
+          </p>
+          <div class="hero__cta-row">
+            <a class="btn btn--primary" href="https://calendly.com/titan-solutions-advisory/discovery" id="book">
+              Book a Free 15-Min Call
+              <svg class="btn__arrow" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                <path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <p class="hero__cta-meta">
+              No sales pitch. No obligation. We'll tell you in 15 minutes whether a review is worth your time.
+            </p>
+          </div>
+        </div>
+
+        <dl class="hero__meta-row">
+          <div class="hero__meta-cell">
+            <p class="hero__meta-label">Engagement</p>
+            <p class="hero__meta-value">Fixed-fee</p>
+          </div>
+          <div class="hero__meta-cell">
+            <p class="hero__meta-label">Turnaround</p>
+            <p class="hero__meta-value">7 days</p>
+          </div>
+          <div class="hero__meta-cell">
+            <p class="hero__meta-label">Investment</p>
+            <p class="hero__meta-value">$2,500 AUD</p>
+          </div>
+          <div class="hero__meta-cell">
+            <p class="hero__meta-label">Deliverable</p>
+            <p class="hero__meta-value">Written report</p>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===================== PROBLEM ===================== -->
+    <section class="problems" data-screen-label="02 Problem">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">The problem</p>
+          <h2 class="section-head__h">
+            Most CFOs are negotiating their largest operating contracts <em>without a baseline.</em>
+          </h2>
+        </div>
+
+        <div class="problems__grid">
+          <article class="problem">
+            <p class="problem__num">01</p>
+            <p class="problem__statement">
+              Most Australian businesses have no idea what fair MSP pricing looks like.
+            </p>
+          </article>
+          <article class="problem">
+            <p class="problem__num">02</p>
+            <p class="problem__statement">
+              MSP invoices bundle licensing, support, and margin in ways that obscure true cost.
+            </p>
+          </article>
+          <article class="problem">
+            <p class="problem__num">03</p>
+            <p class="problem__statement">
+              Without independent benchmarking, you're negotiating blind at every renewal.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WHAT YOU GET ===================== -->
+    <section class="deliverables" data-screen-label="03 What you get">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">What you get</p>
+          <h2 class="section-head__h">
+            One week. One report. <em>Complete clarity.</em>
+          </h2>
+          <p class="section-head__sub">
+            A written commercial review of your MSP contract and IT spend — written for a finance audience, evidenced with benchmarks, and ready to take into your next vendor conversation.
+          </p>
+        </div>
+
+        <div class="deliverables__grid">
+          <article class="deliverable">
+            <p class="deliverable__num">Deliverable 01</p>
+            <h3 class="deliverable__title">Current spend per user vs. market benchmark</h3>
+            <p class="deliverable__desc">Your effective per-user cost, normalised and compared against current Australian MSP pricing for businesses of your size and complexity.</p>
+          </article>
+          <article class="deliverable">
+            <p class="deliverable__num">Deliverable 02</p>
+            <h3 class="deliverable__title">Contract gaps and renewal red flags</h3>
+            <p class="deliverable__desc">Auto-renewal traps, asymmetric exit clauses, scope ambiguities, and SLA language that quietly favours your provider.</p>
+          </article>
+          <article class="deliverable">
+            <p class="deliverable__num">Deliverable 03</p>
+            <h3 class="deliverable__title">Licensing cost breakdown — what's marked up, what's fair</h3>
+            <p class="deliverable__desc">Microsoft 365, security, and third-party licensing examined line by line. The margin sitting on each SKU, made visible.</p>
+          </article>
+          <article class="deliverable">
+            <p class="deliverable__num">Deliverable 04</p>
+            <h3 class="deliverable__title">Negotiation positions you can take to the table</h3>
+            <p class="deliverable__desc">A short list of defensible asks — pricing, terms, scope — sequenced by leverage. Use them at renewal, or to test the market.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <section class="process section-rule" data-screen-label="04 How it works">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">How it works</p>
+          <h2 class="section-head__h">
+            Three steps. No surprises.
+          </h2>
+        </div>
+
+        <ol class="process__list">
+          <li class="process__step">
+            <div class="process__step-marker">
+              <p class="process__step-num">01</p>
+              <p class="process__step-label">Discovery · 30 min</p>
+            </div>
+            <div class="process__step-body">
+              <h3 class="process__step-title">A 30-minute discovery call to scope your environment.</h3>
+              <p class="process__step-desc">We confirm the scope is a fit — your headcount, your stack, your current MSP arrangement. If it isn't, we say so on the call and you go on with your day.</p>
+            </div>
+          </li>
+          <li class="process__step">
+            <div class="process__step-marker">
+              <p class="process__step-num">02</p>
+              <p class="process__step-label">Materials · NDA</p>
+            </div>
+            <div class="process__step-body">
+              <h3 class="process__step-title">You share your invoices and contract — confidentially.</h3>
+              <p class="process__step-desc">A mutual NDA is provided as standard. Twelve months of MSP invoices, the current contract, and any licensing schedules. Materials handled inside Australia and destroyed on request.</p>
+            </div>
+          </li>
+          <li class="process__step">
+            <div class="process__step-marker">
+              <p class="process__step-num">03</p>
+              <p class="process__step-label">Report · 7 days</p>
+            </div>
+            <div class="process__step-body">
+              <h3 class="process__step-title">A written report delivered within seven days.</h3>
+              <p class="process__step-desc">Findings, benchmarks, red flags, and negotiation positions — in a single PDF written for your CFO or board. Balance invoiced on delivery. A short walkthrough call is included.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== INVESTMENT ===================== -->
+    <section class="investment" data-screen-label="05 Investment">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Investment</p>
+          <h2 class="section-head__h">
+            Fixed fee. <em>No surprises.</em>
+          </h2>
+          <p class="section-head__sub">
+            One price for the engagement, agreed in writing before we start. No hourly billing, no scope creep, no expansion phases.
+          </p>
+        </div>
+
+        <div class="invest-card">
+          <div class="invest-price-block">
+            <div class="invest-price">
+              <span class="invest-price__currency">
+</span>
+              <span class="invest-price__amount">$2,500</span>
+            </div>
+            <p class="invest-price__suffix">Fixed engagement fee · GST exclusive</p>
+            <p class="invest-fineprint">
+              50% to commence. 50% on delivery. No hourly billing. No scope creep.
+            </p>
+          </div>
+
+          <dl class="invest-terms">
+            <div class="invest-term">
+              <dt class="invest-term__label">Deposit</dt>
+              <dd class="invest-term__value"><strong>50%</strong> on engagement signed</dd>
+            </div>
+            <div class="invest-term">
+              <dt class="invest-term__label">Balance</dt>
+              <dd class="invest-term__value"><strong>50%</strong> on report delivery</dd>
+            </div>
+            <div class="invest-term">
+              <dt class="invest-term__label">Inclusions</dt>
+              <dd class="invest-term__value">Discovery call, written report, walkthrough call, mutual NDA</dd>
+            </div>
+            <div class="invest-term">
+              <dt class="invest-term__label">Exclusions</dt>
+              <dd class="invest-term__value">Implementation, vendor negotiations on your behalf, ongoing retainer</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="invest-cta-row">
+          <a class="btn btn--primary" href="https://calendly.com/titan-solutions-advisory/discovery">
+            Book a Free 15-Min Call
+            <svg class="btn__arrow" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <p class="invest-cta-meta">
+            We'll confirm fit on the call. No engagement starts without a signed scope.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TRUST ===================== -->
+    <section class="trust" data-screen-label="06 Trust">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Why this practice</p>
+          <h2 class="section-head__h">
+            Built to be the advisor your MSP isn't.
+          </h2>
+        </div>
+
+        <div class="trust__grid">
+          <div class="trust__cell">
+            <svg class="trust__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M3 12h3l3-8 6 16 3-8h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p class="trust__statement">15+ years inside Australian MSP operations.</p>
+          </div>
+          <div class="trust__cell">
+            <svg class="trust__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p class="trust__statement">Independent — not affiliated with any MSP or vendor.</p>
+          </div>
+          <div class="trust__cell">
+            <svg class="trust__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 8a7 7 0 0114 0v3M5 11h14v9H5z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p class="trust__statement">Fixed price. Confidential. NDA as standard.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <div data-include="/partials/cta-banner.html"></div>
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer" data-screen-label="07 Footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <img src="assets/Titan-Solutions-Horizontal.svg" alt="Titan Solutions" />
+        </div>
+        <div class="site-footer__meta">
+          <div class="site-footer__meta-cell">
+            <span class="site-footer__meta-label">Practice</span>
+            <span class="site-footer__meta-value">Sydney NSW, Australia</span>
+          </div>
+          <div class="site-footer__meta-cell">
+            <span class="site-footer__meta-label">ABN</span>
+            <span class="site-footer__meta-value">31 863 281 937</span>
+          </div>
+          <div class="site-footer__meta-cell">
+            <span class="site-footer__meta-label">Contact</span>
+            <span class="site-footer__meta-value"><a href="mailto:advisory@titansolutions.com.au">advisory@titansolutions.com.au</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p class="site-footer__disclaimer">
+          Titan Solutions is an independent advisory practice. We do not provide managed IT services.
+        </p>
+        <p class="site-footer__copyright">© 2026 Titan Solutions Advisory</p>
+      </div>
+    </div>
+  </footer>
 
-  <div data-include="/partials/footer.html"></div>
-  </body>
+</body>
 </html>

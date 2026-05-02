@@ -1,0 +1,327 @@
+/* =====================================================================
+   Titan Solutions — Colors & Type
+   Brand palette derived from logo + production CSS (css/style.css).
+   Type system uses the brand-issued Myriad Pro family, with Caramella
+   (script) and Tunga (compact sans) for accent/display.
+===================================================================== */
+
+/* ---------------------------------------------------------------
+   @font-face — local brand fonts (project-relative paths)
+   Only the core weights/styles are wired up. Extras (condensed,
+   semi-extended, italic variants) are present in /fonts and can
+   be added on demand.
+--------------------------------------------------------------- */
+
+/* Myriad Pro — Light 300 */
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('fonts/MyriadPro-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('fonts/MyriadPro-LightIt_OpenType.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Myriad Pro — Regular 400 */
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('fonts/MyriadPro-Regular_0.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('fonts/MyriadPro-It_0.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Myriad Pro — Semibold 600 */
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('fonts/MyriadPro-Semibold_0.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('fonts/MyriadPro-SemiboldIt_0.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Myriad Pro — Bold 700 */
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('fonts/MyriadPro-Bold_0.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('fonts/MyriadPro-BoldIt_0.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Myriad Pro — Black 900 */
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('fonts/MyriadPro-Black_OpenType.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('fonts/MyriadPro-BlackIt_OpenType.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Caramella — script display face (single weight) */
+@font-face {
+  font-family: 'Caramella';
+  src: url('fonts/Caramella_Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Tunga — compact sans, regular + bold */
+@font-face {
+  font-family: 'Tunga';
+  src: url('fonts/TUNGA_1.TTF') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Tunga';
+  src: url('fonts/TUNGAB_0.TTF') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ---------------------------------------------------------------
+     BRAND PALETTE — direct from logo artwork
+  --------------------------------------------------------------- */
+  --titan-cyan:        #04B0EB;   /* primary brand cyan (from logo + CTA) */
+  --titan-cyan-bright: #00B6EF;   /* hero variant used on /index */
+  --titan-blue:        #0085B5;   /* deep wordmark blue + theme-color */
+  --titan-blue-deep:   #005F80;   /* button base */
+  --titan-blue-darker: #004861;   /* button hover / cta-banner button */
+  --titan-blue-darkest:#003648;   /* deepest hover */
+  --titan-green:       #8CC63F;   /* "SOLUTIONS" green */
+  --titan-green-alt:   #87C542;   /* CTA green strip */
+  --titan-green-deep:  #00A651;   /* services-list icon stroke */
+  --titan-grey:        #A7A9AC;   /* logo grey leaf + footer bg */
+
+  /* ---------------------------------------------------------------
+     EXTENDED — secondary CTA and homepage accent
+  --------------------------------------------------------------- */
+  --titan-orange:      #F39C12;   /* primary CTA on hero */
+  --titan-orange-deep: #E67E22;   /* hover */
+  --titan-navy:        #2C5AA0;   /* hero gradient start + section titles */
+  --titan-navy-deep:   #1E3A5F;   /* hero gradient end */
+  --titan-focus:       #004AAD;   /* accessible focus ring */
+
+  /* ---------------------------------------------------------------
+     SEMANTIC — status icons used inline
+  --------------------------------------------------------------- */
+  --titan-danger:      #E74C3C;
+  --titan-success:     #27AE60;
+
+  /* ---------------------------------------------------------------
+     NEUTRALS / SURFACES
+  --------------------------------------------------------------- */
+  --bg-app:        #F5F7FA;   /* body */
+  --bg-section:    #F8F9FA;   /* services section */
+  --bg-soft:       #F4F7F8;   /* hero (legacy) */
+  --bg-blog:       #F9FBFC;   /* blog preview */
+  --bg-card:       #FFFFFF;
+  --bg-table-head: #F0F0F0;
+
+  --border-soft:   #E0E0E0;
+  --border-rule:   #CCCCCC;
+
+  /* Text */
+  --fg-1: #1A1A1A;     /* headings */
+  --fg-2: #333333;     /* body */
+  --fg-3: #444444;     /* secondary body */
+  --fg-4: #555555;     /* muted body */
+  --fg-5: #666666;     /* subtitles */
+  --fg-on-dark: #FFFFFF;
+
+  /* Shadow tokens — flattened from the production CSS */
+  --shadow-rule:   0 0 0 1px var(--border-soft);              /* card outline */
+  --shadow-1:      0 2px 6px rgba(0,0,0,0.06);                /* blog card resting */
+  --shadow-2:      0 4px 10px rgba(0,0,0,0.08);               /* blog card hover */
+  --shadow-3:      0 4px 15px rgba(0,0,0,0.10);               /* service card resting */
+  --shadow-4:      0 8px 25px rgba(0,0,0,0.15);               /* service card hover */
+
+  /* Radius — production uses 4 / 5 / 6 / 8 px in places */
+  --radius-xs: 4px;
+  --radius-sm: 5px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-pill: 999px;
+
+  /* Spacing (T-shirt) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 80px;
+  --space-10: 120px;
+
+  /* Container — production max-width is 1100px / 90% */
+  --container-width: 1100px;
+  --container-pad: 5%;
+
+  /* Gradients — pulled exactly from production hero + final-cta */
+  --grad-hero:    linear-gradient(135deg, #2C5AA0 0%, #1E3A5F 100%);
+  --grad-cta:     linear-gradient(135deg, #F39C12 0%, #E67E22 100%);
+
+  /* Motion */
+  --ease: cubic-bezier(.4,0,.2,1);
+  --t-fast: 200ms;
+  --t-base: 300ms;
+
+  /* ---------------------------------------------------------------
+     TYPOGRAPHY — Brand fonts
+     - Myriad Pro: corporate sans, used everywhere body + UI live.
+       (Adobe's flagship humanist sans; was the Apple system font
+       prior to San Francisco. Ships in 7 weights here.)
+     - Caramella: a hand-script accent face for warm marketing
+       headlines and editorial pull-quotes.
+     - Tunga: a contrasting compact sans, kept available for
+       tabular / supporting use.
+     All faces are loaded in fonts/ at the project root.
+  --------------------------------------------------------------- */
+  --font-sans: 'Myriad Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-display-script: 'Caramella', 'Brush Script MT', cursive;
+  --font-display-alt: 'Tunga', 'Myriad Pro', 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-semi:    600;
+  --weight-bold:    700;
+
+  --leading-tight: 1.2;
+  --leading-snug:  1.4;
+  --leading-body:  1.6;
+  --leading-loose: 1.8; /* used on blog post bodies */
+
+  /* Type scale — pulled from production rules */
+  --text-display:   3.5rem;   /* hero h1 */
+  --text-h1:        2.5rem;   /* section-title / final-cta h2 */
+  --text-h2:        2rem;     /* about / blog h2 */
+  --text-h3:        1.5rem;   /* service-card h3 / blog-post h2 */
+  --text-h4:        1.25rem;  /* blog list card title */
+  --text-h5:        1.2rem;   /* problem card h4 */
+  --text-lead:      1.3rem;   /* hero subtitle */
+  --text-subtitle:  1.2rem;   /* section-subtitle */
+  --text-body:      1rem;
+  --text-body-lg:   1.1rem;   /* hero p / value-prop */
+  --text-body-sm:   0.95rem;  /* card body */
+  --text-meta:      0.9rem;   /* footer / dates */
+  --text-micro:     0.8rem;
+}
+
+/* =====================================================================
+   SEMANTIC STYLE PRIMITIVES
+===================================================================== */
+
+.ts-display,
+h1.ts-display {
+  font-family: var(--font-sans);
+  font-size: var(--text-display);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  color: var(--fg-on-dark);
+  letter-spacing: -0.01em;
+}
+
+.ts-h1 {
+  font-family: var(--font-sans);
+  font-size: var(--text-h1);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  color: var(--titan-navy);
+}
+
+.ts-h2 {
+  font-family: var(--font-sans);
+  font-size: var(--text-h2);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-snug);
+  color: var(--fg-1);
+}
+
+.ts-h3 {
+  font-family: var(--font-sans);
+  font-size: var(--text-h3);
+  font-weight: var(--weight-semi);
+  line-height: var(--leading-snug);
+  color: var(--titan-blue);
+}
+
+.ts-h4 {
+  font-family: var(--font-sans);
+  font-size: var(--text-h4);
+  font-weight: var(--weight-semi);
+  line-height: var(--leading-snug);
+  color: var(--titan-blue);
+}
+
+.ts-lead {
+  font-size: var(--text-lead);
+  line-height: var(--leading-snug);
+  color: var(--fg-3);
+}
+
+.ts-subtitle {
+  font-size: var(--text-subtitle);
+  color: var(--fg-5);
+}
+
+.ts-body {
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: var(--fg-2);
+}
+
+.ts-body-sm {
+  font-size: var(--text-body-sm);
+  color: var(--fg-3);
+}
+
+.ts-meta {
+  font-size: var(--text-meta);
+  color: var(--fg-4);
+}
+
+.ts-mono {
+  font-family: var(--font-mono);
+}
