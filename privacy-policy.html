@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — Titan Solutions</title>
+<link rel="icon" type="image/svg+xml" href="assets/Titan-Solutions-Icon.svg" />
+<link rel="stylesheet" href="colors_and_type.css" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 90px; }
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: 1.6;
+  }
+
+  :root {
+    --paper: #F4F1EA;
+    --paper-deep: #ECE7DC;
+    --paper-card: #FBF9F4;
+    --ink: #14202E;
+    --ink-2: #2A3645;
+    --ink-3: #4A5566;
+    --ink-mute: #76808E;
+    --rule: #D8D2C4;
+    --rule-soft: #E5E0D2;
+    --accent: var(--titan-navy);
+    --accent-deep: var(--titan-navy-deep);
+    --accent-line: var(--titan-blue);
+    --max: 1180px;
+    --gutter: clamp(20px, 4vw, 56px);
+  }
+
+  .container { width: 100%; max-width: var(--max); margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
+
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--accent-deep);
+    color: #fff;
+    padding: 0.6rem 0.9rem;
+    z-index: 100;
+  }
+  .skip-link:focus { left: 1rem; top: 1rem; }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(244, 241, 234, 0.92);
+    backdrop-filter: saturate(140%) blur(10px);
+    -webkit-backdrop-filter: saturate(140%) blur(10px);
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 72px; }
+  .brand-lockup { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .brand-lockup img { height: 28px; width: auto; }
+  .brand-lockup__divider { width: 1px; height: 22px; background: var(--rule); }
+  .brand-lockup__advisory {
+    font-family: var(--font-display-alt), var(--font-sans);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    font-weight: 700;
+  }
+  .header-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent-deep);
+    text-decoration: none;
+    padding: 10px 16px;
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-xs);
+  }
+
+  .page-hero { padding: clamp(56px, 9vw, 88px) 0 clamp(42px, 6vw, 58px); border-bottom: 1px solid var(--rule); }
+  .eyebrow {
+    font-family: var(--font-display-alt), var(--font-sans);
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ink-3);
+    margin: 0 0 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--accent-line); }
+  .page-title {
+    margin: 0 0 14px;
+    font-size: clamp(36px, 5vw, 62px);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  .page-subtitle { margin: 0; max-width: 720px; color: var(--ink-3); font-size: clamp(17px, 2.1vw, 21px); }
+  .page-meta { margin-top: 20px; font-size: 14px; color: var(--ink-mute); }
+
+  .doc { padding: clamp(48px, 7vw, 84px) 0 clamp(72px, 9vw, 110px); }
+  .doc-wrap { max-width: 820px; }
+  .doc-intro {
+    border-left: 3px solid var(--accent-line);
+    background: var(--paper-card);
+    border: 1px solid var(--rule-soft);
+    border-left-width: 3px;
+    padding: 24px;
+    margin-bottom: 38px;
+  }
+  .doc-intro p { margin: 0 0 12px; color: var(--ink-2); }
+  .doc-intro p:last-child { margin-bottom: 0; }
+
+  h2 {
+    margin: 40px 0 12px;
+    font-size: clamp(24px, 3vw, 31px);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    scroll-margin-top: 104px;
+  }
+  p, li { font-size: 17px; line-height: 1.75; color: var(--ink-2); }
+  p { margin: 0 0 14px; }
+
+  ul { margin: 0 0 16px 0; padding: 0; list-style: none; }
+  li { position: relative; padding-left: 20px; margin-bottom: 8px; }
+  li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.84em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent-line);
+  }
+
+  a { color: var(--accent-deep); text-decoration: underline; text-decoration-color: rgba(44,90,160,0.5); text-underline-offset: 3px; }
+  a:hover { text-decoration-color: var(--accent-deep); }
+  .contact-line a { font-weight: 700; }
+
+  .site-footer {
+    border-top: 1px solid var(--rule);
+    padding: 28px 0 36px;
+    color: var(--ink-3);
+    font-size: 14px;
+  }
+  .site-footer__row { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--titan-focus); outline-offset: 2px; }
+
+  @media (max-width: 640px) {
+    .site-header__inner { min-height: 64px; }
+    .brand-lockup__advisory { display: none; }
+    .brand-lockup__divider { display: none; }
+    p, li { font-size: 16px; }
+    .doc-intro { padding: 18px; }
+  }
+</style>
+</head>
+<body data-screen-label="Privacy Policy">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site-header" role="banner">
+  <div class="container site-header__inner">
+    <a class="brand-lockup" href="index.html" aria-label="Titan Solutions home">
+      <img src="assets/Titan-Solutions-Horizontal-Dark-Final.svg" alt="Titan Solutions" />
+      <span class="brand-lockup__divider" aria-hidden="true"></span>
+      <span class="brand-lockup__advisory">Advisory</span>
+    </a>
+    <a class="header-cta" href="index.html#contact">Book Intro Call</a>
+  </div>
+</header>
+<main id="content">
+  <section class="page-hero" aria-labelledby="page-title">
+    <div class="container">
+      <span class="eyebrow">Legal</span>
+      <h1 id="page-title" class="page-title">Privacy Policy</h1>
+      <p class="page-subtitle">How Titan Solutions collects, uses, stores, and safeguards personal and business information.</p>
+      <p class="page-meta">Last updated: 6 May 2026</p>
+    </div>
+  </section>
+  <article class="doc">
+    <div class="container doc-wrap">
+      <div class="doc-intro">
+        <p>Titan Solutions respects your privacy and is committed to protecting personal information collected through this website and while delivering advisory and consulting services.</p>
+        <p>This policy explains how information is collected, used, stored, and protected in line with the Australian Privacy Principles (APPs) under the Privacy Act 1988 (Cth).</p>
+        <p>Services are provided to businesses and adult professionals only.</p>
+      </div>
+      <section><h2>Information We Collect</h2><p>Titan Solutions may collect information including:</p><ul><li>Name</li><li>Email address</li><li>Phone number</li><li>Company or business name</li><li>Appointment or booking details</li><li>Technical or operational information voluntarily shared during enquiries or engagements</li></ul></section>
+      <section><h2>How Information Is Collected</h2><p>Information may be collected when you submit forms, book meetings using Microsoft Bookings, communicate via email or phone, interact with this website, or provide information during advisory discussions.</p><p>Certain technical information may also be collected automatically through analytics and diagnostic tools.</p></section>
+      <section><h2>Website Analytics and Tracking</h2><p>To understand site usage and improve visitor experience, we use analytics tools including Microsoft Clarity. These tools may collect data such as IP address, browser type, device information, pages visited, and session interactions.</p></section>
+      <section><h2>How Information Is Used</h2><p>Collected information may be used to respond to enquiries, arrange advisory sessions, deliver consulting services, maintain client records, and improve website and service delivery. Titan Solutions does not sell personal information to third parties.</p></section>
+      <section><h2>Data Storage and Security</h2><p>Reasonable steps are taken to protect information from misuse, interference, loss, unauthorised access, modification, or disclosure. Information may be stored using trusted cloud platforms, including Microsoft and HubSpot systems.</p><p>While strong safeguards are used, no electronic system can be guaranteed completely secure.</p></section>
+      <section><h2>Overseas Disclosure</h2><p>Some service providers used by Titan Solutions may store or process information outside Australia through global cloud infrastructure.</p></section>
+      <section><h2>Access and Correction</h2><p>You may request access to personal information held by Titan Solutions or request corrections where required. We aim to respond to privacy-related enquiries within five business days.</p><p class="contact-line"><a href="mailto:privacy@titansolutions.com.au">privacy@titansolutions.com.au</a></p></section>
+      <section><h2>Third-Party Services</h2><p>This website and related operations use third-party services including Microsoft 365, Microsoft Bookings, HubSpot CRM, and Microsoft Clarity. These providers process information according to their own terms and privacy policies.</p></section>
+      <section><h2>Changes to This Policy</h2><p>This policy may be updated from time to time to reflect changes in services, legal obligations, or technology. The latest version will always be published on this website.</p></section>
+      <section><h2>Contact</h2><p>If you have questions about this Privacy Policy or information handling practices, contact:</p><p class="contact-line"><a href="mailto:privacy@titansolutions.com.au">privacy@titansolutions.com.au</a></p></section>
+    </div>
+  </article>
+</main>
+<footer class="site-footer" role="contentinfo">
+  <div class="container site-footer__row">
+    <span>© 2026 Titan Solutions. All rights reserved.</span>
+    <a href="index.html">Return to homepage</a>
+  </div>
+</footer>
+</body>
+</html>
